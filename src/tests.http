@@ -1,0 +1,64 @@
+###
+//get all seguros
+GET http://localhost:3000/api/seguros/
+
+###
+//get all usuarios
+GET http://localhost:3000/api/usuarios/
+
+###
+//get one seguro
+GET http://localhost:3000/api/seguros/
+
+###
+//get one usuario
+GET http://localhost:3000/api/usuarios/64ce8d166fa50050b90b1099
+
+
+###
+//add new Seguro
+POST http://localhost:3000/api/seguros/ HTTP/v1.1
+content-type: application/json
+
+{
+  "nombreSeguro":"Salud Complementario Empresa",
+  "empresaContratante":"BienStar",
+  "categoria":"Salud",
+  "descripcion":""
+}
+
+###
+//add new Usuario
+POST http://localhost:3000/api/usuarios/ HTTP/v1.1
+content-type: application/json
+
+{
+  "nombreUsuario":"xertal",
+  "claveUsuario":"1234",
+  "nombreCompleto":"Christopher Granger",
+  "admin": false
+}
+
+//update one seguro
+###
+PATCH http://localhost:3000/api/seguros/64d3ecf558bd3536be51dfad
+content-type: application/json
+
+{
+  "nombreSeguro":"Salud Complementario Persona"
+}
+//update one usuario
+###
+PATCH http://localhost:3000/api/usuarios/64d3d82f7a449e9ea234375c
+content-type: application/json
+
+{
+  "nombreUsuario":"xertal"
+}
+
+//delete one seguro
+###
+DELETE http://localhost:3000/api/seguros/id
+//delete one usuario
+###
+DELETE http://localhost:3000/api/usuarios/64d3d82f7a449e9ea234375c
